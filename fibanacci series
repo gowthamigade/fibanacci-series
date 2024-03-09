@@ -1,0 +1,13 @@
+def generate_fibonacci(n):
+    fibonacci_series = [0, 1]
+
+    while len(fibonacci_series) < n:
+        next_term = fibonacci_series[-1] + fibonacci_series[-2]
+        fibonacci_series.append(next_term)
+
+    return fibonacci_series
+
+# Example usage:
+num_terms = int(input("Enter the number of Fibonacci terms to generate: "))
+fibonacci_result = generate_fibonacci(num_terms)
+print(f"Fibonacci Series up to {num_terms} terms: {fibonacci_result}")
